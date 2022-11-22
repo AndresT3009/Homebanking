@@ -29,7 +29,7 @@ const app = Vue.createApp({
             let username_login = this.username_login;
             let password_login = this.password_login;
             return axios.post('/api/login',`email=${username_login}&password=${password_login}`)
-            .then(response=> window.location.href = "http://localhost:8080/web/account.html")
+            .then(response=> window.location.href = "/web/account.html")
             .catch(function (error){
                 Swal.fire({confirmButtonColor: '#2691d9',title:'Wrong password or username'})
             })

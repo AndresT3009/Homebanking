@@ -32,7 +32,7 @@ const app = Vue.createApp({
             let accountType=this.accountType
             return axios.post('/api/clients',`firstName=${name}&lastName=${lastname}&email=${email}&password=${password}&accountType=${accountType}`)
             .then(response =>axios.post('/api/login',`email=${email}&password=${password}`)
-            .then(response=> window.location.href = "http://localhost:8080/web/account.html"))
+            .then(response=> window.location.href = "/web/account.html"))
             .catch(function(error){
                 if(error.response.data=="Missing First Name"){
                     return Swal.fire({confirmButtonColor: '#2691d9',title:'First Name field is missing'})

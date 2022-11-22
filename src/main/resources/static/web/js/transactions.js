@@ -26,7 +26,7 @@ const app = Vue.createApp({
 
         logOut(){
             return axios.post('/api/logout')
-            .then(response=> window.location.href = "http://localhost:8080/web/index.html")
+            .then(response=> window.location.href = "/web/index.html")
         },
         
         modificarSaldo(saldo){

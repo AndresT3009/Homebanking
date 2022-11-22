@@ -34,7 +34,7 @@ const app = Vue.createApp({
         },
         logOut(){
             return axios.post('/api/logout')
-            .then(response=> window.location.href = "http://localhost:8080/web/index.html")
+            .then(response=> window.location.href = "/web/index.html")
         },
         datemodified(date){
             return new Date(date).toLocaleDateString('es-co', {year:"numeric", month:"short", day:"numeric"})
@@ -46,7 +46,7 @@ const app = Vue.createApp({
             let account_origin=this.account_origin
             let description=this.description
             return axios.post('/api/transactions',`accountOrigin=${account_origin}&accountDestiny=${account_destiny}&amount=${amount}&description=${description}`)
-            .then(response=> window.location.href = "http://localhost:8080/web/transfers.html?id='+account.id")
+            .then(response=> window.location.href = "/web/transfers.html?id='+account.id")
             .catch(function(error){
                 if(error.response.data=="Missing Account Origin"){
                     return Swal.fire({confirmButtonColor: '#2691d9',title:'Account Origin field is missing'})

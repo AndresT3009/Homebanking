@@ -36,13 +36,13 @@ const app = Vue.createApp({
 
         logOut(){
             return axios.post('/api/logout')
-            .then(response=> window.location.href = "http://localhost:8080/web/index.html")
+            .then(response=> window.location.href = "/web/index.html")
         },
 
         create_account(){
             let type=this.account_type
             return axios.post('/api/clients/current/account',`accountType=${type}`)
-            .then(response=> window.location.href = `http://localhost:8080/web/account.html` )
+            .then(response=> window.location.href = `/web/account.html` )
             .catch(function(error){
                 if(error.response.data=="Missing Account Type"){
                     return Swal.fire({confirmButtonColor: '#2691d9',title:'Account type field is missing'})

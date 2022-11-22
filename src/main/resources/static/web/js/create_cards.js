@@ -37,13 +37,13 @@ const app = Vue.createApp({
         },
         logOut(){
             return axios.post('/api/logout')
-            .then(response=> window.location.href = "http://localhost:8080/web/index.html")
+            .then(response=> window.location.href = "/web/index.html")
         },
         create_card(){
             let type=this.card_type
             let color=this.card_color
             return axios.post('/api/clients/current/cards',`cardType=${type}&cardColor=${color}`)
-            .then(response=> window.location.href = "http://localhost:8080/web/cards.html")
+            .then(response=> window.location.href = "/web/cards.html")
             .catch(function(error){
                 if(error.response.data=="Missing Card Type"){
                     return Swal.fire({confirmButtonColor: '#2691d9',title:'Please choose card type'})

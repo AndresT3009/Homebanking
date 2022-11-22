@@ -52,7 +52,7 @@ const app = Vue.createApp({
 
         logOut() {
             return axios.post('/api/logout')
-                .then(response => window.location.href = "http://localhost:8080/web/index.html")
+                .then(response => window.location.href = "/web/index.html")
         },
 
 
@@ -69,7 +69,7 @@ const app = Vue.createApp({
                     'interest': parseInt(this.interest)
                 })
                 .then(response => {
-                    if (response.status == 201) { window.location.href = `http://localhost:8080/api/loans` }
+                    if (response.status == 201) { window.location.href = `/api/loans` }
                 })
                 .catch(function(error){
                                    

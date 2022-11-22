@@ -46,7 +46,7 @@ const app = Vue.createApp({
 
         logOut() {
             return axios.post('/api/logout')
-                .then(response => window.location.href = "http://localhost:8080/web/index.html")
+                .then(response => window.location.href = "/web/index.html")
         },
 
 
@@ -63,7 +63,7 @@ const app = Vue.createApp({
                     'accountnumber': this.accountNumber
                 })
                 .then(response => {
-                    if (response.status == 201) { window.location.href = `http://localhost:8080/web/account.html` }
+                    if (response.status == 201) { window.location.href = `/web/account.html` }
                 })
                 .catch(function(error){
                     if(error.response.data=="Account Number does not exist"){
