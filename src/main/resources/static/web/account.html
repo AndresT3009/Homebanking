@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/LOGOI.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Accounts || B-B</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <div class="header d-flex align-items-center justify-content-around">
+                <div class="inner-header d-flex align-items-center flex-row flex-wrap gap-2 m-3">
+                    <a href="#" class="navbar-brand animate__animated animate__pulse"><img
+                            src="../assets/images/LOGOI.png" width="80" height="80" alt="Logo" /></a>
+                    <div class="d-flex flex-column">
+                        <div>
+                            <h2 class="tittle_header">BROTHERS</h2>
+                        </div>
+                        <div>
+                            <h2 class="tittle_header">BANK</h2>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg mb-3">
+                    <div class="container_nav d-flex">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navmenu">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navmenu">
+                            <ul class="navbar-nav ms-auto gap-4 d-flex align-items-center justify-content-center">
+                                <li class="nav-item">
+                                    <a href="#" class="navs active links animate__animated animate__bounce">Accounts</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#loans" class="navs links animate__animated animate__bounce">Loans</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./cards.html"
+                                        class="navs links animate__animated animate__bounce">Cards</a>
+                                </li>
+                                <li>
+                                    <a href="./branchs.html"
+                                        class="btn text-primary p-2 d-flex flex-column align-items-center text-light"
+                                        style="--bs-border-opacity: .5;">
+                                        <lord-icon src="https://cdn.lordicon.com/oaflahpk.json" trigger="hover"
+                                            style="width:50px;height:50px">
+                                        </lord-icon>Branch Offices
+                                    </a>
+                                </li>
+                                <li>
+
+                                    <a href="./products.html"
+                                        class="btn text-primary p-2 d-flex flex-column align-items-center text-light"
+                                        style="--bs-border-opacity: .5;">
+                                        <lord-icon src="https://cdn.lordicon.com/ggihhudh.json" trigger="hover"
+                                            style="width:50px;height:50px">
+                                        </lord-icon>Products
+                                    </a>
+                                </li>
+                                <button type="button"
+                                    class="btn text-primary p-2 d-flex flex-column align-items-center text-light"
+                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    <lord-icon src="https://cdn.lordicon.com/bnylezcu.json" trigger="hover"
+                                        style="width:50px;height:50px">
+                                    </lord-icon>Log Out
+                                </button>
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5 text-dark" id="staticBackdropLabel">Log Out
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p class="text-dark">Are you sure you want to log out?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" @click.prevent="logOut" class="btn btn-primary"
+                                                    data-bs-dismiss="modal"><a
+                                                        class="close text-light text-decoration-none"
+                                                        href="./index.html">I'm Sure</a></button>
+                                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><a
+                                                        class="close text-light text-decoration-none" href="#">Cancel
+                                                        log out</a></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main class="main_accounts d-flex flex-column justify-content-center align-items-center gap-2">
+            <h2 class="subtitulo_sucursal text-center text-dark mt-5 fs-1">¡Hello!, {{client.firstname}}
+                {{client.lastname}}</h3>
+                <h5 class="subtitulo_sucursal text-center text-dark m-3">
+                    Below we show you the summary of your accounts and open credits</h5>
+                <div class="button_request d-flex flex-row flex-wrap align-items-center justify-content-center">
+                    <div class="nav3 d-flex justify-content-center flex-column align-items-center">
+                        <ul
+                            class="navegacion3 d-flex flex-row gap-2 flex-wrap justify-content-center align-items-center  animate__animated animate__bounce mb-5">
+                            <li v-show="accounts.length<3">
+                                <a data-bs-toggle="modal" data-bs-target="#staticBackdrop2" href="#">
+                                    <i>
+                                        <lord-icon src="https://cdn.lordicon.com/nocovwne.json" trigger="hover"
+                                            style="width:50px;height:50px">
+                                        </lord-icon>
+                                    </i>
+                                    <span>Create Account</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5 text-dark" id="staticBackdropLabel">CREATE ACCOUNT
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="text-dark">Select account type</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <fieldset class="fieldset d-flex flex-column align-items-center">
+                                            <div class="fieldset_accounts d-flex flex-row flex-wrap justify-content-center m-4">
+                                                <input v-model="account_type" type="radio" name="account" value="CURRENT" id="current"
+                                                    required>
+                                                <label class="label p-2 fs-4  text-dark" value="current">CURRENT</label>
+                                                <input v-model="account_type" type="radio" name="account" value="SAVINGS" id="savings"
+                                                    required>
+                                                <label class="label p-2 fs-4 text-dark" value="savings">SAVINGS</label>
+                                            </div>
+                                        </fieldset>
+                                        <button type="button" class="btn btn-primary"
+                                            data-bs-dismiss="modal"><a  data-bs-toggle="modal" data-bs-target="#staticBackdrop3" href="#" class="close text-light text-decoration-none"
+                                                href="#">CREATE</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5 text-dark" id="staticBackdropLabel">CREATE ACCOUNT
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="text-dark">Are you sure you want to create an account?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" @click="create_account" class="btn btn-primary"
+                                            data-bs-dismiss="modal"><a class="close text-light text-decoration-none"
+                                                href="./account.html">I'm Sure</a></button>
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><a
+                                                class="close text-light text-decoration-none"
+                                                href="#">Cancel</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav3 d-flex justify-content-center flex-column align-items-center">
+                        <ul
+                            class="navegacion3 d-flex flex-row gap-2 flex-wrap justify-content-center align-items-center  animate__animated animate__bounce mb-5">
+                            <li v-show="loans.length<3">
+                                <a href="./loan-application.html">
+                                    <i>
+                                        <lord-icon src="https://cdn.lordicon.com/nocovwne.json" trigger="hover"
+                                            style="width:50px;height:50px">
+                                        </lord-icon>
+                                    </i>
+                                    <span>Apply Loan</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <h1 id="loans" class="tittles text-center">ACCOUNTS</h1>
+                <div
+                    class="cards_sucursal d-inline-flex flex-wrap justify-content-center align-items-center border-top border-bottom border-primary">
+                    <div class="container_account d-flex flex-row justify-content-around align-items-center m-2 "
+                        v-for="account in accounts">
+                        <div class="account_cards">
+                            <div class="cards_face face1">
+                                <div class="account_content">
+                                    <h3>{{account.number}} {{account.accountType}}</h3>
+                                    <p class="paragraph text-center">Opening Date:</p>
+                                    <p class="paragraph text-center fw-bold">{{datemodified(account.creationDate)}}</p>
+                                </div>
+                            </div>
+                            <div class="cards_face face2">
+                                <div class="account_content">
+                                    <p class="paragraph text-center fw-bold fs-3 mt-2">Balance:</p>
+                                    <p class="paragraph text-center  fw-bold">{{modificarSaldo(account.balance)}} </p>
+                                    <div class="buttons_cards d-flex flex-row gap-2">
+                                        <a class="detalles_cuentas border text-light border-light p-1"
+                                            :href="'http://localhost:8080/web/transactions.html?id='+account.id">
+                                            <lord-icon src="https://cdn.lordicon.com/yeallgsa.json" trigger="hover"
+                                                style="width:40px;height:40px">
+                                            </lord-icon>Details
+                                        </a>
+                                        <a class="detalles_cuentas border text-light border-light p-1"
+                                            :href="'http://localhost:8080/web/transfers.html?id='+account.id">
+                                            <lord-icon src="https://cdn.lordicon.com/qvzrpodt.json" trigger="hover"
+                                                style="width:40px;height:40px">
+                                            </lord-icon>Transfers
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h1 id="loans" class="tittles text-center m-4">LOANS</h1>
+                <div class="cards_sucursal d-inline-flex flex-wrap justify-content-center border-top  border-primary">
+                    <div class="container_account d-flex flex-row justify-content-around m-2 mb-3"
+                        v-for="loan in loans">
+                        <div class="account_cards">
+                            <div class="cards_face face1">
+                                <div class="account_content">
+                                    <h3>{{loan.name}} Credit</h3>
+                                </div>
+                            </div>
+                            <div class="cards_face face2">
+                                <div class="account_content">
+                                    <p class="paragraph text-center mt-2">Amount:</p>
+                                    <p class="paragraph text-center">{{modificarSaldo(loan.amount)}}</p>
+                                    <p class="paragraph text-center">Fees canceled:</p>
+                                    <p class="paragraph text-center">3 of {{loan.payments}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div v-show="loans.length == 0">
+                    <div
+                        class="tarjetas_productos d-flex flex-row flex-wrap justify-content-center align-items-center mb-5">
+                        <div data-aos="fade-center d-flex align-items-center justify-content-center">
+                            <h3 class="subtitulo_sucursal text-center m-3 text-light">YOU STILL DO NOT HAVE CREDITS WITH
+                                US
+                            </h3>
+                            <div class="image_card text-center"><img class="imagen_productos" src="" alt="">
+                            </div>
+                            <p class="parrafos_productos text-center">"We invite you to acquire our products and achieve
+                                your dreams quickly. Ask Us how"</p>
+                        </div>
+                    </div>
+                </div>
+        </main>
+        <footer class="inicio">
+            <div class="footer d-flex flex-column flex-wrap justify-content-center text-center p-1 gap-2">
+                <div class="foooter d-flex flex-row gap-5 justify-content-around align-items-center flex-wrap mt-2">
+                    <a href="#" class="navbar-brand"><img src="../assets/images/LOGOII.png" width="200" height="80"
+                            alt="Logo" /></a>
+                    <a href="#" class="navbar-brand"><img src="../assets/images/vigilado-sfc.png" width="200"
+                            height="25" alt="Logo" /></a>
+                    <p class="paragraph_footer text-light">Copyright © 2022 Brothers Bank Group</p>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+        <script src="../node_modules/axios/dist/axios.min.js"></script>
+        <script src="../web/js/account.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdn.lordicon.com/pzdvqjsp.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
+    </div>
+</body>
+
+</html>

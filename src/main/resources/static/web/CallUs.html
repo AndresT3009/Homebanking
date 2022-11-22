@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/LOGOI.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Call Us || B-B</title>
+</head>
+<body>
+    <header>
+        <div class="header d-flex align-items-center justify-content-around">
+            <div class="inner-header d-flex align-items-center flex-row flex-wrap gap-2 m-3">
+                <a href="#" class="navbar-brand animate__animated animate__pulse"><img src="../assets/images/LOGOI.png"
+                        width="80" height="80" alt="Logo" /></a>
+                        <div class="d-flex flex-column">
+                            <div>
+                                <h2 class="tittle_header">BROTHERS</h2>
+                            </div>
+                            <div>
+                                <h2 class="tittle_header">BANK</h2>
+                            </div>
+                        </div>
+                    </div>
+            <nav class="navbar navbar-expand-lg mb-3">
+                <div class="container_nav d-flex">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navmenu">
+                        <ul class="navbar-nav ms-auto gap-4 mt-3">
+                            <li class="nav-item animate__animated animate__bounce">
+                                <a href="./index.html" class="navs links ">Home</a>
+                            </li>
+                            <li class="nav-item animate__animated animate__bounce">
+                                <a href="./products.html" class="navs  links">Products</a>
+                            </li>
+                            <li class="nav-item animate__animated animate__bounce" v-if="accounts.length==0">
+                                <a href="./login.html" class="navs links">Sign in</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="main_call_us d-flex flex-column">
+        <h1 class="tittles text-center m-3 p-3">CALL OUR PHONE NUMBERS</h1>
+        <div class="products_cards d-flex flex-row flex-wrap justify-content-around align-items-center mt-5">
+            <div data-aos="fade-left">
+                <h2 class="tittles m-4">CALL US</h2>
+                <p class="paragraph_products m-4 text-dark fw-bold">We want you to contact us to share your comments,
+                    opinions and all that you need;<br> or to receive complete advice on a product or service of
+                    your
+                    interest.<br> Depending on the information you need, you can do so using the following options:
+                </p>
+            </div>
+        </div>
+        <div class="numbers text-dark fw-bold text-center mt-3 m-2 g-5">
+            <p class="numbers text-dark fw-bold fs-2"><b>Free National phone number:</b> 01 8000 512 380</p>
+            <p class="numbers text-dark fw-bold fs-2"><b>Business Phone number:</b> (604) 527 34 80</p>
+            <p class="numbers text-dark fw-bold fs-2"><b>International clients assistance:</b> 301(604) 01 800 321 54 15</p>
+            <p class="numbers text-dark fw-bold fs-2"><b>PBX:</b> +57(4)805 39 80</p>
+        </div>
+    </main>
+    <footer class="home">
+        <div class="footer d-flex flex-column flex-wrap justify-content-center text-center p-1 gap-2">
+            <div class="text_footer d-flex flex-row justify-content-around flex-wrap mt-4 text-light">
+                <div>
+                    <h5 class="subtitle_footer fs-6">FOR YOU</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Send and receive money</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Benefits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">PSE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">CDT's</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="subtitle_footer fs-6">IT MAY INTEREST YOU</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Financial Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Terms of use</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Agricultural credits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Credits for students</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="subtitle_footer fs-6">BROTHERS BANK GROUP</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Accesibility</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Employees</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Work with Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="foooter d-flex flex-row gap-5 justify-content-evenly align-items-center flex-wrap mt-2">
+                <a href="#" class="navbar-brand"><img src="../assets/images/LOGOII.png" width="200" height="80"
+                        alt="Logo" /></a>
+                <a href="#" class="navbar-brand"><img src="../assets/images/vigilado-sfc.png" width="200" height="25"
+                        alt="Logo" /></a>
+                <p class="paragraph_footer text-light">Copyright © 2022 Brothers Bank Group</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../web/js/account.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
